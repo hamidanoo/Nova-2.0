@@ -11,12 +11,12 @@
     },
     "keywords": [
         "whatsapp bot",
-        "Nᴀᴢᴀᴡᴀʟɪ Aꜱꜱɪꜱᴛᴀɴᴛ",
+        "Nova 2.0",
         "bot",
         "baileys",
         "md"
     ],
-    "author": "Erum Shah",
+    "author": "Hamid Shah",
     "license": "MIT",
     "dependencies": {
         "@bochilteam/scraper": "^5.0.1",
