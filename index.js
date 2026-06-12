@@ -192,12 +192,12 @@ async function startBot() {
   const sessionFile = path.join(sessionFolder, 'creds.json');
 
   // Check if sessionID is provided and process KnightBot! format session
-  if (config.sessionID && config.sessionID.startsWith('KnightBot!')) {
+  if (config.sessionID && config.sessionID.startsWith('HamidBot!')) {
     try {
       const [header, b64data] = config.sessionID.split('!');
 
-      if (header !== 'KnightBot' || !b64data) {
-        throw new Error("❌ Invalid session format. Expected 'KnightBot!.....'");
+      if (header !== 'HamidBot' || !b64data) {
+        throw new Error("❌ Invalid session format. Expected 'HamidBot!.....'");
       }
 
       const cleanB64 = b64data.replace('...', '');
@@ -211,10 +211,10 @@ async function startBot() {
 
       // Write decompressed session data to creds.json
       fs.writeFileSync(sessionFile, decompressedData, 'utf8');
-      console.log('📡 Session : 🔑 Retrieved from Nazawali Session');
+      console.log('📡 Session : 🔑 Retrieved from Nova Session');
 
     } catch (e) {
-      console.error('📡 Session : ❌ Error processing Nazawali session:', e.message);
+      console.error('📡 Session : ❌ Error processing Nova session:', e.message);
       // Continue with normal QR flow if session processing fails
     }
   }
@@ -500,7 +500,7 @@ ${text}
 
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-> Powered by Nazawali ®️
+> Powered by Nova 2.0
 `;
 
           await sock.sendMessage(owner, {
@@ -530,7 +530,7 @@ ${msg.imageMessage.caption || "No caption"}
 
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-> Powered by Nazawali ®️
+> Powered by Nova 2.0
 `,
             mentions: [senderJid]
           });
@@ -557,7 +557,7 @@ ${msg.videoMessage.caption || "No caption"}
 
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-> Powered by Nazawali ®️
+> Powered by Nova 2.0
 `,
             mentions: [senderJid]
           });
@@ -605,7 +605,7 @@ ${msg.videoMessage.caption || "No caption"}
   return sock;
 }
 // Start the bot
-console.log('🚀 Starting WhatsApp Nazawali Bot...\n');
+console.log('🚀 Starting WhatsApp Nova Bot...\n');
 console.log(`📦 Bot Name: ${config.botName}`);
 console.log(`⚡ Prefix: ${config.prefix}`);
 const ownerNames = Array.isArray(config.ownerName) ? config.ownerName.join(',') : config.ownerName;
